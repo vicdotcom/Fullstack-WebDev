@@ -2,22 +2,25 @@
 Hypertext Markup Language (HTML) is the standard markup language for creating web pages. It describes the structure of a web page semantically and originally included cues for the appearance of the document. 
 
 - [HTML Fundamentals](#html-fundamentals)
-  - [Project Structure](#project-structure)
+  - [Concepts Covered](#concepts-covered)
   - [Basic HTML Structure](#basic-html-structure)
   - [HTML Elements](#html-elements)
     - [HTML Nesting](#html-nesting)
 
-## Project Structure
-```
-01_html_basics/
-├── 01_news_article/
-│   ├── 01_news_article.html
+## Concepts Covered
+```yaml
+01_html_basics/   
+├── 01_news_article/  #  HTML Nesting (<div>), <h1>, <h2>, <p>, <img>
+│   ├── 01_news_article.html   
 │   └── mars.jpg
-├── 02_signup_page/
-│   └── 02_signup_page.html
-├── build_google.html
+├── 02_signup_page/    # <button>, <input>, linebreaks (<br>),
+│   ├── 02_signup_page.html    
+│   └── build_google.html
+├── 03_portfolio_page/    # Anchor tags (<a>)
+│   ├── header.html 
+│   └── experience.html     
 ├── image.png
-├── index.html
+├── index.html            
 └── README.md
 ```
 
