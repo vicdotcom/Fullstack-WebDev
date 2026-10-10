@@ -71,3 +71,7 @@ ehthumbs.db
 *.tmp
 *.temp
 *.bak
+
+# Other files
+tree.txt
+directory_tree.txt

@@ -11,7 +11,7 @@ Hypertext Markup Language (HTML) is the standard markup language for creating we
 ## Concepts Covered
 ```yaml
 01_html_basics/   
-├── 01_news_article/  #  HTML Nesting (<div>), <h1>, <h2>, <p>, <img>
+├── 01_news_article/   #  HTML Nesting (<div>), <h1>, <h2>, <p>, <img>
 │   ├── 01_news_article.html   
 │   └── mars.jpg
 ├── 02_signup_page/    # <button>, <input>, linebreaks (<br>),
@@ -20,7 +20,13 @@ Hypertext Markup Language (HTML) is the standard markup language for creating we
 │   └── build_google_structured.html   # HTML document structure
 ├── 03_portfolio_page/    # Anchor tags (<a>)
 │   ├── header.html 
-│   └── experience.html     
+│   └── experience.html   
+├── 04_olympics/    # Ordered Lists (<ol>), Unordered Lists (<ul>)
+│   ├── olympics.html  
+├── 05_personal_website/  # deployment (netlify)
+│   ├── 01_homepage.html  # Homepage content and structure
+│   ├── index.js          # Adds interactive behavior
+│   └── styles.css        # Controls the page's appearance
 ├── image.png
 ├── index.html            
 └── README.md
