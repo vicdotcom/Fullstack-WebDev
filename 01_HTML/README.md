@@ -64,7 +64,7 @@ In the above code snippet, `<div>` is the parent element, while `<h1>`, `<h2>`, 
 Nesting allows for a more organized and structured HTML document. It also allows for better styling and manipulation of elements using CSS and JavaScript.
 
 ### HTML Document Structure
-Every HTML page follows the same skeleton, shown below using the Google homepage clone (`build_google_structured.html`).
+Every HTML page follows the same boilerplate, shown below using the Google homepage clone (`build_google_structured.html`).
 
 ```html
 <!doctype html>
