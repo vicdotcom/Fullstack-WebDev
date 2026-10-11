@@ -1,0 +1,11 @@
+/* CSS works by selecting certain HTML elements on the page and styling them accordingly */
+
+/* HTML body element */
+body {
+    color: white;        /* Font color */
+    font-family: Arial, Helvetica, sans-serif;  /* Font style */
+    font-weight: bolder;    /* lighter, normal, bold, bolder */
+    text-align: left;  /* left, center, right */
+    background: saddlebrown;   /* page background color */
+    margin-top: 5px;  /* From 0px and upwards */
+}
