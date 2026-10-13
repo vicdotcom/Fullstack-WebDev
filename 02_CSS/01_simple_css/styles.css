@@ -8,4 +8,6 @@ body {
     text-align: left;  /* left, center, right */
     background: saddlebrown;   /* page background color */
     margin-top: 5px;  /* From 0px and upwards */
+    display: block;
+      /* "block" display for stacking items one on top of another, "inline" for side by side stacking */
 }

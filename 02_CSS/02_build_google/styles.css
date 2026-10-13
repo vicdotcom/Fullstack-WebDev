@@ -1,0 +1,39 @@
+/* HTML Body element */
+body {background-color: white;}
+
+
+/* div.main */
+.main {
+    margin-top: 100px;
+    display: flex;    /* Elements can be arranged column/row-wise */
+    flex-direction: column;  /* Elements are arranged vertically (column-wise) */
+    align-items: center;     /* Possible due to flex parameter above */
+}
+
+
+/* div.img_logo */
+.img_logo {
+    width: 200px;
+    display: block;  
+      /* Elements are arranged vertically but take the full available width */
+    mix-blend-mode: multiply;  
+      /* Makes the image blend into the background */
+      /* Helpful to remove white background from some images*/
+      /* May not be the best solution especially if the page background color changes */
+}
+
+/* div.input */
+.search_bar{
+    width: 350px;
+    display: block;
+    border-radius: 10px;     /* Degree of rounded edges applied */
+}
+
+/* div.button */
+.button button{
+    display: inline;  
+      /* Elements are arranged side-by-side */
+      /* Use "inline-block" if you want to set custom dimensions */
+    border-radius: 5px;
+    margin-top: 20px;
+}
