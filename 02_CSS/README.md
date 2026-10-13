@@ -7,6 +7,14 @@ Without CSS, a webage would look like a plain text document with unformatted tex
 - Responsive Design: Adapting the layout seamlessly to look great on any screen size, from desktop monitors to mobile phones.
 - Animations: Creating transitions, hover effects, and decorative flourishes
 
+## Concepts Covered
+```yaml
+02_CSS/
+├── 01_simple_css/     # Linking a stylesheet (<link>), color, font-family, font-weight,
+│
+└── 02_build_google/   # Class selectors (.main), descendant selectors (.button button), display types (block / inline / inline-block /flex), margin types, alignment, border-radius, mix-blend-mode
+```
+
 ## Basic Syntax
 CSS works by selecting certain HTML elements on the page and styling them accordingly. Say we have the following HTML code that mimics the [Google homepage](https://www.google.com/):
 
