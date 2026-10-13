@@ -8,34 +8,86 @@ Without CSS, a webage would look like a plain text document with unformatted tex
 - Animations: Creating transitions, hover effects, and decorative flourishes
 
 ## Basic Syntax
-CSS works by selecting certain HTML elements on the page and styling them accordingly. Say we have the following HTML code:
+CSS works by selecting certain HTML elements on the page and styling them accordingly. Say we have the following HTML code that mimics the [Google homepage](https://www.google.com/):
 
 ```html
 <!DOCTYPE html>
+
 <html>
     <head>
-        <title>test_site.com</title>
+        <title>google.com</title>
         <link rel="stylesheet" href="styles.css">
-            
     </head>
 
     <body>
-        Please accept our cookies.
+        <!-- div.main -->
+        <div class="main">
+                <!-- img_logo class -->
+                <img class="img_logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo-D0-cTlzM8X__f505EwRQp3bwFfVETXisSDFLVepsg&s=10" alt="Google">
 
-        <br><br>
-        <code>
-            test
-        </code>
+                <!-- search_bar class -->
+                <input class="search_bar" type="search" placeholder="Ask me anything">
+
+            <!-- div.button since we want to edit two button elements at once-->
+            <div class="button">
+                <a href="https://www.google.com/" target="_blank">
+                    <button>Google Search</button>
+                </a>
+                <a href="https://theuselessweb.com/" target="_blank">
+                    <button>I'm feeling lucky</button>
+                </a>
+            </div>
+        </div>
     </body>
-
-    <code></code>
 </html>
 ```
 
-If we want to change the font color of the text "Please accept our cookies." to red, we can do so by adding the following CSS code to `styles.css`:
+To style the page above (centered logo, search bar and buttons), we can add the following CSS code to `styles.css`:
 
 ```css
-/* HTML body element */
-body {color: blueviolet;}
+/* HTML Body element */
+body {background-color: white;}
+
+
+/* div.main */
+.main {
+    margin-top: 100px;
+    display: flex;    /* Elements can be arranged column/row-wise */
+    flex-direction: column;  /* Elements are arranged vertically (column-wise) */
+    align-items: center;     /* Possible due to flex parameter above */
+}
+
+
+/* div.img_logo */
+.img_logo {
+    width: 200px;
+    display: block;  
+      /* Elements are arranged vertically but take the full available width */
+    mix-blend-mode: multiply;  
+      /* Makes the image blend into the background */
+      /* Helpful to remove white background from some images*/
+      /* May not be the best solution especially if the page background color changes */
+}
+
+/* div.input */
+.search_bar{
+    width: 350px;
+    display: block;
+    border-radius: 10px;     /* Degree of rounded edges applied */
+}
+
+/* div.button */
+/* Specify the element as well to apply the styles to it */
+.button button{
+    display: inline;  
+      /* Elements are arranged side-by-side */
+      /* Use "inline-block" if you want to set custom dimensions */
+    border-radius: 5px;
+    margin-top: 20px;
+}
 ```
-where `body` is the selector that targets the `<body>` element in the HTML, and property-value pair `color: blueviolet;` is the declaration that changes the text color to blueviolet.
+Each rule has a **selector** (what to style) and **declarations** (`property: value;` pairs that say how to style it):
+
+- `body` is an element selector that targets the `<body>` element, and `background-color: white;` sets the page background.
+- `.main`, `.img_logo` and `.search_bar` are class selectors (prefixed with `.`) that target elements with `class="main"`, `class="img_logo"` and `class="search_bar"`.
+- `.button button` is a descendant selector that targets only `<button>` elements inside an element with `class="button"`.

@@ -30,6 +30,7 @@ body {background-color: white;}
 }
 
 /* div.button */
+/* Specify the element as well to apply the styles to it */
 .button button{
     display: inline;  
       /* Elements are arranged side-by-side */
