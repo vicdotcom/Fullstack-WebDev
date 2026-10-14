@@ -13,6 +13,8 @@ Without CSS, a webage would look like a plain text document with unformatted tex
 ├── 01_simple_css/     # Linking a stylesheet (<link>), color, font-family, font-weight,
 │
 └── 02_build_google/   # Class selectors (.main), descendant selectors (.button button), display types (block / inline / inline-block /flex), margin types, alignment, border-radius, mix-blend-mode
+│
+└── 03_padding/      # Padding, margin, border, the box model (margin, border, padding, content)
 ```
 
 ## Basic Syntax

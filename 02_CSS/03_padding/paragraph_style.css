@@ -1,0 +1,25 @@
+.card {
+    color: #222222;
+    background: lightblue;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* padding determines background size */
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 100px;
+    padding-top: 100px;
+    /* default `padding` parameter applies padding equally on all sides */
+
+    /* border settings */
+    border: 2px dotted red;
+    border-radius: 30px;
+}
+
+/* These settings are part of a common configuration known as The Box Model */
+    /* Margin */
+    /* Border */
+    /* Padding */
+    /* Content */
