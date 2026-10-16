@@ -31,7 +31,11 @@ Without CSS, a webage would look like a plain text document with unformatted tex
 │
 └── 03_padding/      # Padding, margin, border, the box model (margin, border, padding, content)
 │
-└── 03_padding/  # CSS box model (margin, border, padding, content), flexbox (flex-direction, justify-content, align-items), CSS inheritance
+└── 04_following_tab/   # Practice the concepts specified above
+│
+└── 05_business_card/  # CSS box model (margin, border, padding, content), flexbox (flex-direction, justify-content, align-items), CSS inheritance
+│
+└── 06_space_website/  # Background images, custom fonts 
 ```
 
 ## Basic Syntax
@@ -216,10 +220,15 @@ Individual sides can be set with `margin-top`, `margin-right`, `margin-bottom`, 
 - `auto` lets the browser compute the margin. On a block element with a set `width`, `margin: 0 auto;` centers it horizontally.
 - In the `10px 20px auto auto` example, `left: auto` pushes the element to the right edge, while a vertical `auto` is `0` in normal block flow (it only absorbs free space inside a flex container).
 - Vertical margins of adjacent block elements **collapse**: the gap between them is the larger of the two margins, not the sum.
-- Margins can be negative (`margin-left: -10px`) to pull an element toward its neighbour.
+- Margins can be negative (`margin-left: -10px`) to pull an element toward its neighbor.
 
 ## Miscellaneous
 ### Resources
 - Color Palette Generator: [Coolors](https://coolors.co/)
+- Background Removal: [Remove.bg](https://www.remove.bg/)
+- Background Images: [Unsplash](https://unsplash.com/)
+- Custom fonts and icons: [Google Fonts](https://fonts.google.com/), [Font Awesome](https://fontawesome.com/), [1001 Fonts](https://www.1001fonts.com/)
+  - Google Fonts are obtained via embedding a `<link>` in the `<head>` of your HTML, then using the font-family in your CSS.
+  - Other font sites may require downloading a `.ttf` or `.woff` file and using `@font-face` in your CSS to load it.
 
 

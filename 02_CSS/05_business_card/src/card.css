@@ -2,7 +2,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* Font stack which the UI goes through in case the font is not available in the user's device */
     width: 800px;  /* Width of element */
-    margin: auto;  /* Centering the element */
+    margin: auto;  /* Automatically compute top, bottom, left, right margins */
     background-color: rgb(206, 247, 255);
     padding: 40px;
     border-bottom: 10px solid;
