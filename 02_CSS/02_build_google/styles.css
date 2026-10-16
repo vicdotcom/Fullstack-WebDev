@@ -16,7 +16,7 @@ body {background-color: white;}
 
 /* div.img_logo */
 .img_logo {
-    width: 200px;
+    width: 280px;
     display: block;  
       /* Elements are arranged vertically but take the full available width */
     mix-blend-mode: multiply;  
@@ -27,11 +27,16 @@ body {background-color: white;}
 
 /* div.input */
 .search_bar{
-    width: 350px;
+  margin-top: 10px;
+    width: 400px;
     height: 30px;
     display: block;
-    border-radius: 15px;     /* Degree of rounded edges applied */
+    border: 1px solid;
+    border-color: rgb(208, 208, 208);
+    border-radius: 15px;    /* Degree of rounded edges applied */
     text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 /* div.button */
@@ -41,5 +46,20 @@ body {background-color: white;}
       /* Elements are arranged side-by-side */
       /* Use "inline-block" if you want to set custom dimensions */
     border-radius: 5px;
+    border: 1px solid;
     margin-top: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button a{
+  text-decoration: none;
+    /* Remove hyperlink underline */
+}
+
+/* While the permanent underline is removed from the buttons, It's good UX to make the udnerline appear only when someone hovers the mouse over the link */
+.button a:hover {
+  text-decoration: underline;
 }
