@@ -1,0 +1,30 @@
+.card {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font stack which the UI goes through in case the font is not available in the user's device */
+    width: 800px;  /* Width of element */
+    margin: auto;  /* Centering the element */
+    background-color: rgb(206, 247, 255);
+    padding: 40px;
+    border-bottom: 10px solid;
+    border-color: rgb(255, 177, 255);
+    display: flex;  
+    /* Elements within a flex dsiplay element are automatically block */
+    flex-direction: row;
+    justify-content: space-evenly;
+    /*  */
+}
+
+.img-profile {
+    width: 250px;
+}
+
+.bio {
+    display: block;
+    font-size: x-large;
+    text-align: center;
+    
+}
+
+.italics {
+    font-style: italic;
+}
