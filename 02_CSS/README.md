@@ -17,6 +17,7 @@ Without CSS, a webage would look like a plain text document with unformatted tex
   - [The Box Model](#the-box-model)
     - [Display Types](#display-types)
     - [How Flexbox Works](#how-flexbox-works)
+      - [Growing and Shrinking](#growing-and-shrinking)
     - [Margin and Padding Shorthand](#margin-and-padding-shorthand)
   - [HTML/CSS Class vs ID Attributes/Selectors](#htmlcss-class-vs-id-attributesselectors)
   - [CSS Units](#css-units)
@@ -199,11 +200,16 @@ Setting `display: flex` on a **parent** (the flex container) turns its direct ch
 ```css
 .container {
     display: flex;
-    flex-direction: row;          /* main axis: row (default, left->right) | column (top->bottom) */
-    justify-content: space-between; /* align items along the MAIN axis: flex-start | center | flex-end | space-between | space-around */
-    align-items: center;          /* align items along the CROSS axis: stretch (default) | flex-start | center | flex-end */
-    gap: 10px;                    /* space between items */
-    flex-wrap: wrap;              /* let items wrap onto a new line instead of shrinking */
+    flex-direction: row;  
+      /* main axis: row (default, left->right) | column (top->bottom) */
+    justify-content: space-between; 
+      /* align items on a vertical axis: flex-start | center | flex-end | space-between | space-around */
+    align-items: center;         
+       /* align items on a hroizontal axis: stretch (default) | flex-start | center | flex-end */
+    gap: 10px;                    
+      /* space between items */
+    flex-wrap: wrap;              
+      /* let items wrap onto a new line instead of shrinking */
 }
 
 .item {
@@ -213,6 +219,15 @@ Setting `display: flex` on a **parent** (the flex container) turns its direct ch
 
 - `flex-direction: column` swaps the axes: `justify-content` then works vertically and `align-items` horizontally.
 - Only direct children are affected; grandchildren need their own flex container.
+
+
+#### Growing and Shrinking
+This determines how flex items adjust their sizes when there is extra space or not enough space inside their container.
+- `flex-grow` lets an element expand to use available space.
+- `flex-shrink` lets an element reduce its size to fit when space is limited.
+
+Each can be used alongside with `flex-basis` which determines the item's starting size before free space is distributed.
+
 
 ### Margin and Padding Shorthand
 `margin` (and `padding`) accept 1 to 4 values. Sides always go **clockwise from the top**: top, right, bottom, left.
