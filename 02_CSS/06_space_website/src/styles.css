@@ -38,6 +38,16 @@ body {
     padding: auto;
 }
 
+.terms-conditions a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.terms-conditions a:hover {
+    text-decoration: underline;
+
+}
+
 /* Company logo image */
 #img-logo {
     width: 25%;
@@ -51,9 +61,15 @@ body {
     border: none;
     border-radius: 20%;
     text-align: center;
+    text-decoration: none;
+    color: rgb(0, 95, 108);
     font-family: inherit; 
       /* Buttons don't normally inherit properties from the parent HTML class. */
       /* We can set it to do so */
+}
+
+.button-apply:hover {
+    text-decoration: underline;
 }
 
 /* Span class */

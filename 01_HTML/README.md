@@ -68,7 +68,7 @@ Every HTML page follows the same boilerplate, shown below using the Google homep
 
 ```html
 <!doctype html>
-<html>
+<html lang="en"> <!-- HTML language code -->
     <head>
         <link rel="stylesheet" href="styles.css">
         <title>Google.com</title>
