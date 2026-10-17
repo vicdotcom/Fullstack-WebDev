@@ -7,10 +7,10 @@ Without CSS, a webage would look like a plain text document with unformatted tex
 - Responsive Design: Adapting the layout seamlessly to look great on any screen size, from desktop monitors to mobile phones.
 - Animations: Creating transitions, hover effects, and decorative flourishes
 
-# Table of Contents
+## Table of Contents
 
 - [CSS](#css)
-- [Table of Contents](#table-of-contents)
+  - [Table of Contents](#table-of-contents)
   - [Concepts Covered](#concepts-covered)
   - [Basic Syntax](#basic-syntax)
   - [Inheritance](#inheritance)
@@ -18,6 +18,15 @@ Without CSS, a webage would look like a plain text document with unformatted tex
     - [Display Types](#display-types)
     - [How Flexbox Works](#how-flexbox-works)
     - [Margin and Padding Shorthand](#margin-and-padding-shorthand)
+  - [HTML/CSS Class vs ID Attributes/Selectors](#htmlcss-class-vs-id-attributesselectors)
+  - [CSS Units](#css-units)
+    - [Absolute Units (`px`, `cm`, `mm`, `in`, `pt`, `pc`)](#absolute-units-px-cm-mm-in-pt-pc)
+    - [Font Relative Units (`em`, `rem`)](#font-relative-units-em-rem)
+      - [`em`](#em)
+      - [`rem`](#rem)
+      - [Other useful font relative units](#other-useful-font-relative-units)
+    - [Percentage Units (`%`)](#percentage-units-)
+    - [Viewport Units (`vw`, `vh`, `vmin`, `vmax`)](#viewport-units-vw-vh-vmin-vmax)
   - [Miscellaneous](#miscellaneous)
     - [Resources](#resources)
 
@@ -222,13 +231,186 @@ Individual sides can be set with `margin-top`, `margin-right`, `margin-bottom`, 
 - Vertical margins of adjacent block elements **collapse**: the gap between them is the larger of the two margins, not the sum.
 - Margins can be negative (`margin-left: -10px`) to pull an element toward its neighbor.
 
+## HTML/CSS Class vs ID Attributes/Selectors
+In HTML, `class` and `id` are attributes that are used to identify and distinguish elements for styling with CSS and targeting with JavaScript. The main difference is that `class` can be used on **multiple elements**, while `id` should be **unique to a single element** on the page.
+
+Say we are building a website with several buttons. If we were to apply the same CSS styling to all of them we could use a `class` attribute, like so:
+
+```html
+<!-- html -->
+<button class="btn">Login</button>
+<button class="btn">Register</button>
+<button class="btn">Subscribe</button>
+```
+
+Same styling can be applied to all buttons via the `.btn` class selector in CSS:
+
+```css
+/* css */
+.btn {
+    color: red;
+}
+```
+
+If we wanted to style a specific button differently, we could use an `id` attribute:
+
+```html
+<!-- html -->
+<button id="login-btn">Login</button>
+<button id="register-btn">Register</button>
+<button id="subscribe-btn">Subscribe</button>
+```
+
+```css
+/* css */
+#login-btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+/* Note the selector for id attributes is the hashtag symbol # */
+
+#register-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+#subscribe-btn {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+```
+
+Which would render as:
+
+<button style="background-color: blue; color: white;
+padding: 10px 20px; border: none; border-radius: 5px;">
+    Login
+</button>
+
+<button style="background-color: green; color: white;
+padding: 10px 20px; border: none; border-radius: 10px;">
+    Register
+</button>
+
+<button style="background-color: orange; color: black;
+padding: 10px 20px; border: 2px solid black; border-radius: 20px;">
+    Subscribe
+</button>
+
+## CSS Units
+
+CSS units tell the browser how big, how long, how far apart, or how thick something should be.
+
+### Absolute Units (`px`, `cm`, `mm`, `in`, `pt`, `pc`)
+They represent fixed CSS measurements that do not change based on the screen size or resolution. The most common absolute unit is `px` (pixels), which is widely used for web design.
+
+| **Unit** | **Meaning** | **Common use** |
+|---|---|---|
+| `cm` | Centimetres | Print layouts |
+| `mm` | Millimetres | Print layouts |
+| `in` | Inches | Print layouts |
+| `pt` | Points; 1/72 of an inch | Print and typography |
+| `pc` | Picas; 12 points | Print typography |
+
+### Font Relative Units (`em`, `rem`)
+#### `em`
+An `em` is based on the font size of the relevant element's context. Suppose we have the following HTML and corresponding CSS:
+```html
+<div class="parent">
+    <p> Hello world!</p>
+    <p class="child">Hello world!</p>
+</div>
+```
+
+```css
+.parent {
+    font-size: 20px;
+}
+
+.child {
+    font-size: 1.5em;  /* 1.5 x parent font size */
+}
+```
+The parent has a font size of 20px, so the child will have a font size of 30px (1.5 * 20px). If the parent font size changes, the child font size will also change accordingly.
+
+#### `rem`
+`rem` stands for root em. It is based on the font size of the root HTML element, usually the `<html>` element. From there, it works similarly to `em`, adjusting the size of the element based on the root font size.
+
+```css
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+```
+
+#### Other useful font relative units
+They relate to particular font measurements.
+
+| **Unit** | **Meaning** | **Example use** |
+|---|---|---|
+| `ch` | Width of the 0 character in the current font | Limiting text line length |
+| `ex` | Height of the lowercase x in the current font | Fine typography adjustments |
+| `cap` | Height of capital letters in the current font | Aligning text-based elements |
+| `ic` | Width of the ideographic character 水 in the current font | CJK typography |
+
+
+### Percentage Units (`%`)
+Percentages generally size something relative to another value, such as the parent element or for instance, the percentage of padding to be applied relative to the element's width.
+
+### Viewport Units (`vw`, `vh`, `vmin`, `vmax`)
+They size elements relative to the browser's viewport (the visible area of the web page) rather than any particular element.
+
+| Unit | Meaning |
+|---|---|
+| `vw` | $n$% of viewport width |
+| `vh` | $n$% of viewport height |
+| `vmin` | $n$% of the smaller viewport dimension |
+| `vmax` | $n$% of the larger viewport dimension |
+
+A typical use case:
+```css
+.hero {
+    width: 100vw;
+    height: 100vh;
+}
+```
+
+Where the hero section is set to take 100% of the viewport width and height, making it fill the entire screen regardless of the device or window size. Though `100vw` can sometimes cause horizontal scrolling due to the presence of a vertical scrollbar, so:
+```css
+.hero {
+    width: 100%;
+    min-height: 100vh;
+}
+```
+could be a better starting point to ensure the hero section fills the viewport height without causing horizontal overflow.
+
+Newer viewport units such as `svh`, `lvh`, and `dvh` are useful for mobile browser controls:
+- `svh`: small viewport height.
+- `lvh`: large viewport height.
+- `dvh`: dynamic viewport height.
+
+
 ## Miscellaneous
 ### Resources
-- Color Palette Generator: [Coolors](https://coolors.co/)
+- Color Palette Generator: [Coolors](https://coolors.co/). Coolors also allows us to fetch a color palette from an image, which is useful for designing a website based on a logo or other branding material.
 - Background Removal: [Remove.bg](https://www.remove.bg/)
 - Background Images: [Unsplash](https://unsplash.com/)
 - Custom fonts and icons: [Google Fonts](https://fonts.google.com/), [Font Awesome](https://fontawesome.com/), [1001 Fonts](https://www.1001fonts.com/)
   - Google Fonts are obtained via embedding a `<link>` in the `<head>` of your HTML, then using the font-family in your CSS.
   - Other font sites may require downloading a `.ttf` or `.woff` file and using `@font-face` in your CSS to load it.
+- Logo Generator: [Looka](https://looka.com/), [Logo](https://logo.com)
+- Webp files for dynamic (moving) images: [Giphy](https://giphy.com/), [LottieFiles](https://lottiefiles.com/), [Tenor](https://tenor.com/)
 
 

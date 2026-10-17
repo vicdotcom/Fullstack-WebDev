@@ -1,25 +1,38 @@
 /* Entire page body */
 body {
-    color: white;
-    background-image: url("../images/universe.jpg");
-    /* Background images are added in CSS */
-    background-size: cover;
-    /* Adjustable background image size based on broswer dimensions */
+    color: #82baca;
+    margin: 0;
 
     /* From Google fonts family */
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400px;  /* Use weight from 400 to 900 */
+    font-weight: 800px;  /* Use weight from 400 to 900 */
     font-style: normal;
 
 }
 
 /* Elements within the body */
 .landing {
-    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 0px 20% 0px;
+
+    background-image: url("../images/galaxy.webp");
+    /* Background images are added in CSS rather than in HTML using img*/
+    background-size: cover;
+    /* Adjustable background image size based on broswer dimensions */
+}
+
+/* Terms and conditions section */
+.terms-conditions {
+    text-align: center;
+    padding: auto;
+}
+
+/* Company logo image */
+#img-logo {
+    width: 25%;
 }
 
 /* Apply button */
@@ -33,5 +46,10 @@ body {
     font-family: inherit; 
       /* Buttons don't normally inherit properties from the parent HTML class. */
       /* We can set it to do so */
+}
+
+/* Span class */
+.explore {
+    border-bottom: 4px solid rgb(172, 255, 230);
 }
 
