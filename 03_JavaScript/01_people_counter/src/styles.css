@@ -1,0 +1,45 @@
+html, body {
+    margin: 10px 20px;
+
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/044/761/875/small_2x/group-of-people-standing-in-queue-continuous-one-line-drawing-crowd-of-people-waiting-in-line-minimalist-simple-linear-style-outline-illustration-vector.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Image is locked to the viewport while scrolling */
+    opacity: 0.9;
+
+}
+
+.site-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+#count-el {
+    background: rgb(204, 180, 227);
+    color: rgb(26, 0, 0);
+    padding: 4px 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+#increment-button {
+    font-family: inherit;
+    align-self: inherit;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px dotted;
+    border-radius: 5px;
+}
+
+#increment-button:hover {
+    text-decoration: underline;
+    border: 1px solid;
+}
