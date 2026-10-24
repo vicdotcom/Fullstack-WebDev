@@ -419,6 +419,7 @@ Newer viewport units such as `svh`, `lvh`, and `dvh` are useful for mobile brows
 
 ## Miscellaneous
 ### Resources
+- Website/App/Graphic designs: [Figma](https://www.figma.com/)
 - Color Palette Generator: [Coolors](https://coolors.co/). Coolors also allows us to fetch a color palette from an image, which is useful for designing a website based on a logo or other branding material.
 - Background Removal: [Remove.bg](https://www.remove.bg/)
 - Background Images: [Unsplash](https://unsplash.com/)
